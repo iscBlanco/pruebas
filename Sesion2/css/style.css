@@ -1,0 +1,15 @@
+div{
+    width: 40%;
+    align-items: center;
+    /*justify-content: center;*/
+    /*display: inline-block;*/
+    background: cadetblue;
+    margin: auto;
+    border-radius: 15px;
+    border:solid;
+    padding:30px;
+    
+}
+ button{
+     align-content: flex-end;
+ }

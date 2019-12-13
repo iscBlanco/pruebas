@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <main>
+        <div id="app">
+            <span>{{mensaje}}</span>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>nombre</th>
+                            <th>piezas</th>
+                            <th>fecha</th>
+                            <th>monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="elemento in articulosFiltrados.comprasDe3">
+                            <td>{{elemento.id}}</td>
+                            <td>{{elemento.nombre}}</td>
+                            <td>{{elemento.piezas}}</td>
+                            <td>{{elemento.fecha}}</td>
+                            <td>{{elemento.monto}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
