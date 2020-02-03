@@ -1,0 +1,37 @@
+
+.main{
+    display: block;
+    margin: auto;
+    background: #999988;
+    border-radius: 5px;
+}
+li{
+    list-style: none;
+    
+    display:inline;
+    margin: 10px;
+}
+.main li a{
+    padding: 10px;
+    text-decoration: none;
+    
+    color: black;
+    border-radius: 5px;
+}
+.main li a:hover{
+    color:red;
+    
+}
+.Header .navbar-brand img{
+   width:70px;
+   height:70px;
+   border-radius: 50%;
+}
+.dragon{
+    display: block;
+    margin: auto;
+}
+.carousel-item img{
+    width: 500px;
+    height: 586px;
+}
