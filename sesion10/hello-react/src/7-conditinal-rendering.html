@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+  <title>Conditional Rendering</title>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function LoginComponent(props) {
+      return (
+        <button onClick={props.onClick}>Login</button>
+      )
+    }
+    function LogoutComponent(props) {
+      return (
+        <button onClick={props.onClick}>Logout</button>
+      )
+    }
+
+    class LoginLogout extends React.Component {
+      constructor(props) {
+        super(props)
+        this.state = {
+          isLoggedIn: false
+        }
+      }
+
+      handleClick(val) {
+        this.setState({
+          isLoggedIn: val
+        })
+      }
+
+      render() {
+        let button;
+        if (this.state.isLoggedIn) {
+          button = <LogoutComponent onClick={(e) => this.handleClick(false, e)} />
+        } else {
+          button = <LoginComponent onClick={(e) => this.handleClick(true, e)} />
+        }
+        return (
+          <div>
+            {button}
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(
+      <LoginLogout />,
+      document.querySelector('#root')
+    )
+  </script>
+</body>
+
+</html>

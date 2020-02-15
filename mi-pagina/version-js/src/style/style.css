@@ -34,4 +34,25 @@ li{
 .carousel-item img{
     width: 500px;
     height: 586px;
+} 
+.Header .container .imagen img{
+    width: 200px;
+    height: auto;
+}
+.Header .portafolio{
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+.foto{
+    
+}
+.foto img{
+    width:200px;
+    height: auto;
+    border-radius:50%;
+}
+.Header .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
 }

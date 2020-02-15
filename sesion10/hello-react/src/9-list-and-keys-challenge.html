@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+  <title>Conditional Rendering</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function ListItem(props){
+            return <li><a href={props.value.href}>{props.value.label}</a></li>
+        }
+        function NumberList(props){
+            const lista = props.lista
+            const listItems = lista.map((elemento)=><ListItem value={elemento}/>)
+            return(
+                <nav>
+                    <ul>
+                        {listItems}
+                    </ul>
+                </nav>
+            )
+        }
+
+      /* class ListContainer extends React.Component{
+            render(){
+                const listaElementos = [
+                    {id:0, href:'./1-hello.html', label:'React CDN'},
+                    {id:1, href:'./2-component.html', label:'Component'},
+                    {id:2, href:'./2.1-functional-component.html', label:'Functional Component'},
+                    {id:3, href:'./3-props.html', label:'Props'},
+                    {id:4, href:'./4-state-and-lifecycle.html', label:'State and Life Cycle'},
+                    {id:5, href:'./5-state-challenge.html', label:'State and Life Cycle Challenge'},
+                    {id:6, href:'./6-event-handler.html', label:'Event Handler'},
+                    {id:7, href:'./7-conditional-rendering.html', label:'Conditional Rendering'},
+                    {id:8, href:'./8-list-and-keys.html', label:'List and Keys'}
+                ]
+                return(
+                    <div>
+                        <NumberList lista={listaElementos}/>
+                        </div>
+                )
+            }
+        }*/
+        function ListContainer(props){
+            const listaElementos = [
+                    {id:0, href:'./1-hello.html', label:'React CDN'},
+                    {id:1, href:'./2-component.html', label:'Component'},
+                    {id:2, href:'./2.1-functional-component.html', label:'Functional Component'},
+                    {id:3, href:'./3-props.html', label:'Props'},
+                    {id:4, href:'./4-state-and-lifecycle.html', label:'State and Life Cycle'},
+                    {id:5, href:'./5-state-challenge.html', label:'State and Life Cycle Challenge'},
+                    {id:6, href:'./6-event-handler.html', label:'Event Handler'},
+                    {id:7, href:'./7-conditional-rendering.html', label:'Conditional Rendering'},
+                    {id:8, href:'./8-list-and-keys.html', label:'List and Keys'}
+                ]
+                return(
+                    <div>
+                        <NumberList lista={listaElementos}/>
+                    </div>
+                )
+           
+        }
+
+
+
+        ReactDOM.render(
+            <ListContainer />,
+            document.querySelector('#root')
+        )
+    </script>
+  
+</body>
+
+</html>
