@@ -1,0 +1,33 @@
+const petFile=[
+    {
+        id:1,
+        name:"Grunion",
+        gender:"male",
+        breed:"bulldog"
+    },
+    {
+        id:2,
+        name:"Brutus",
+        gender:"male",
+        breed:"bulldog"
+    },
+    {
+        id:3,
+        name:"Peque",
+        gender:"female",
+        breed:"chihuahua"
+    },
+    {
+        id:4,
+        name:"Chester",
+        gender:"male",
+        breed:"chihuahua"
+    },
+    {
+        id:5,
+        name:"Euro",
+        gender:"male",
+        breed:"pitbull"
+    },
+]
+export default petFile
