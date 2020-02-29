@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>React state</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+    class App extends React.Component{
+        constructor(){
+            super()
+            this.state={
+                count:0,
+            }
+            this.incrising = this.incrising.bind(this)
+        }
+        incrising(){
+            this.setState((prevState)=>{
+                    return {count: prevState.count + 1}
+            })
+        }
+        render(){
+            return(
+                <div>
+                    <h2>CONTADOR</h2>
+                    <h1>{this.state.count}</h1>
+                    <button onClick={this.incrising}>Click me</button>
+                </div>
+            )
+        }
+    }
+    
+    ReactDOM.render(
+        <App/>,
+        document.getElementById('root')
+    )
+    </script>
+    
+    
+</body>
+</html>

@@ -1,11 +1,15 @@
 import React from 'react'
-import './style.css'
+import '../style.css'
 
-function TodoItem(){
+function TodoItem(props){
     return(
         <div className="todo-item">
-            <input type="checkbox"/>
-            <label>list element </label>
+            <input 
+                type="checkbox"
+                checked={props.item.completed}
+                onChange={()=>props.handleClicked(props.item.id)}
+            />
+            <label>{props.item.id} {props.item.text} </label>
         </div>
 
     )
