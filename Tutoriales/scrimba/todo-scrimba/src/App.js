@@ -41,13 +41,15 @@ class App extends React.Component {
       return accum
     }, { complete: [] })
 
-    let doneList = done.complete.map(activity =>
+    let done2 = this.state.todos.filter(item=> item.completed === true )
+  
+    let doneList = done2.map(activity =>
       <TodoItem
         key={activity.id}
         item={activity}
         handleClicked={this.handleChange}
       />)
-
+      console.log(done)
 
     return (
       <div className="todo-list">
