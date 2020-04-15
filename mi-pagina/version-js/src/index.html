@@ -6,14 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style/style.css">
-   
+    
+    <style>
+      :root{
+        --gris-azul:     #233059;
+        --gris-claro:    #5D6C8C; 
+        --gris-oscuro:   #344459;
+        --blanco:        #D9D9D9;
+        --negro:         #0D0D0D;
+      }
+      body{
+        background-color: var(--negro);
+      }
+      .Header .navbar{
+        background: var(--gris-claro);
+      }
+      #carouselExampleIndicators{
+        width:50%;
+        margin:10px auto;
+      }
+      .Header .navbar-brand img{
+        width:70px;
+        height:auto;
+        border-radius: 50%;
+      }
+      .container-fluid{
+        background: var(--gris-claro);
+      }
+      .carousel-item img{
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+      } 
+    </style>
 </head>
 <body>
     <div class="Header">
   
       <!--  NAVBAR EJEMPLO DE BOOTSTRAP -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#"><img src="./assets/logo.jpg"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,8 +104,7 @@
             <div class="carousel-caption">
               <h2 class="display-2">Bienvenidos!!</h2>
               <h3>Estudio Profesional</h3>
-              <button class="btn btn-outline-light btn-sm">View Demo</button>
-              <button class="btn btn-primary btn-sm">Subscribe</button>
+             
             </div>
           </div>
           <div class="carousel-item">
@@ -82,6 +112,9 @@
           </div>
           <div class="carousel-item">
             <img src="./assets/viajes/randyEngelhard.jpg"alt="">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/viajes/chica.jpg"alt="">
           </div>
         </div>
         <a class="carousel-control-prev"  href="#carouselExampleIndicators" role="button" data-slide="prev">
