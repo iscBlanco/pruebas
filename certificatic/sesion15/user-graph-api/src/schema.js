@@ -1,11 +1,11 @@
-const {gpl} = require('apollo-server')
+const {gql} = require('apollo-server')
 
 const typeDefs = gql`
 type Query{
     getUsers: [User]
 }
 type Mutation {
-    signup(name: String, email:String, password:String)
+    signup(name: String, email: String, password: String)
 }
 type User{
     id:ID,

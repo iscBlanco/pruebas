@@ -168,7 +168,7 @@
     footer{
         padding: 30px 20px;
         background-color: #14153d;
-        background-image: url('/assets/footer_image.png');
+        background-image: url('./assets/footer_image.png');
         background-size: 40%;
         background-repeat: no-repeat;
         background-position: top center;
