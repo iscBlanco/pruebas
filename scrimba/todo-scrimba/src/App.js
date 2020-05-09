@@ -26,16 +26,46 @@ class App extends React.Component{
       }
     })
   }
+  /*completedList(){
+    //console.log('Has Changed!',id)
+  
+    
+    return list
+  }  */
   render(){
+
     let todoList = this.state.todos.map(activity =>
       <TodoItem
         key={activity.id}
         item={activity}
         handleClicked={this.handleChange}
+        stylized={true}
       />)
+
+      
+      let list = this.state.todos.reduce((item,selected)=>{
+        if(selected.completed === true){
+          item.completed.push(selected)
+        }
+        return item
+      }, { completed:[]})
+   
+      let doneList = list.completed.map(activity =>
+        <TodoItem
+          key={activity.id}
+          item={activity}
+          stylized={false}
+          //handleClicked={this.handleChange}
+        />)
+      console.log(list.completed)
+      console.log(todoList.id)
+
     return(
       <div className="todo-list">
         {todoList}
+        <hr></hr>
+        <h1>TASKS DONE</h1>
+        {doneList}
       </div>
     )
   }

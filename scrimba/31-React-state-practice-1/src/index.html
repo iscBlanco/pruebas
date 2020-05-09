@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
+	<title>31-React-practice-1</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+	class App extends React.Component{
+		constructor(){
+			super()
+			this.state={
+				isLoggedIn:true
+			}
+		}
+		render(){
+			return(
+				<div>
+					<h1>Practica de React State y Conditional Render.</h1>
+					<h2>You are currently logged{this.state.isLoggedIn ? "in":"out"} </h2>
+				</div>
+				)
+		}
+	}
+	ReactDOM.render(<App/>,document.getElementById('root'))
+	</script>
+	
+</body>
+</html>
