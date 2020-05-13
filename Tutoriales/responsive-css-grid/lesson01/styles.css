@@ -1,0 +1,116 @@
+/*variables*/
+:root{
+    --primary: #ffc636;
+    --secondary: #0a0b5b;
+}
+
+/*fonts*/
+@font-face{
+    font-family:'Baloo';
+    src: url('./assets/BalooBhaina2-SemiBold.ttf');
+    font-family:'Rubik';
+    src: url('./assets/Rubik-Regular.ttf')
+
+}
+h1,h2,h3,h4{
+    color: #dddbff;
+}
+p,a,li{
+    color:#9893d8;
+}
+h1,h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.1em;
+}
+
+/*reset*/
+body,a,p,ul,li{
+    margin-left:5px;
+    padding:0;
+    text-decoration:none;
+}
+ul{
+    list-style-type: none;
+}
+.site-nav ul{
+    display:none;
+}
+
+/*base styles*/
+body{
+    background:var(--secondary);
+    overflow-x: hidden;
+    font-family: 'Baloo';
+}
+.button{
+    margin:10px 0;
+    padding:5px;
+    background:none;
+    border: 2px solid ;
+    border-color: var(--primary);
+    color:var(--primary);
+    border-radius:20px;
+    text-transform:uppercase;
+}
+.button:hover{
+    background: var(--primary);
+    color: var(--secondary);
+}
+button a{
+    font-family: 'Rubik' ;
+}
+
+input, textarea{
+    background: rgba(255,255,255,0.05);
+    padding: 10px 16px;
+    border:2px solid #9893d8;
+    border-radius: 20px;
+    color:#f2f2f2;
+}
+
+/*mobile styles*/
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+}
+.site-nav h1{
+    
+    grid-column: 1/4;
+    border-bottom: solid var(--primary);
+}
+.welcome-text{
+    grid-column: 1/6;
+}
+.welcome-img{
+    grid-column:6/9;
+}
+.welcome-img img{
+    width:150%;
+}
+#portfolio h3{
+    text-align: center;
+    color:gray;
+}
+.projects a{
+    grid-column:1/9;
+    margin:20px 0;
+    display:flex;
+}
+.projects a *{
+    width: 40%;
+    margin:0 20px;
+    align-self: center;
+}
+
+
+/*small tablets styles*/
+
+/*large tablets & laptop styles */
+
+/*desktop styles */
