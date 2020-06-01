@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>30-React-state-practice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    class App extends React.Component{
+     // De esta forma era como se declaraba el metodo CONSTRUCTOR
+     // y se asignaban las variables de estado
+        /*   constructor(){
+            super()
+            this.state={
+                name:"Christoff",
+                age:10
+            }
+        }*/
+        state={
+            name:'Jose Blanco',
+            age:30
+        }
+        infoMethod =()=>{
+            let name=""
+            return{
+                variableMetodo:"Info retornada del metodo.."
+            }
+        }
+        render(){
+            let sonName = 'Christoff Blanco'
+            return (
+                <div>
+                    <h1>Nombre: {this.state.name}</h1>
+                    <h2>{this.state.age} years old</h2>
+                    <h2>{this.infoMethod().variableMetodo}</h2>
+                    <h2>Nombre de mi hijo: {sonName}</h2>
+                </div>
+            )
+            }
+        }
+    ReactDOM.render(
+        <App/>,
+        document.getElementById("root")
+    )
+    </script>
+</body>
+</html>
