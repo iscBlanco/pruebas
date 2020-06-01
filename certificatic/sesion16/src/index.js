@@ -1,8 +1,22 @@
-import bcrypt from 'bcrypt'
-import logger from './logger'
+require ('dotenv').config()
+import { ApolloServer } from 'apollo-server'
+import typeDefs from './schema'
+import resolvers from './resolvers'
+import createStore from './persistence/connection'
+import AuthAPI from './datasource/AuthAPI'
+import UserAPI from './datasource/UserAPI'
 
-const logger = require('./logger')
+const store = createStore()
 
-logger.info('This is a "info" line')
-logger.error('This is a "error" line')
-logger.debug('This is a "debug" line')
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    dataSources: () => ({
+        authAPI: new AuthAPI({ store }),
+        userAPI: new UserAPI({ store })
+    })
+})
+
+server.listen().then(({ url })=> {
+    console.log(`Server running at ${url}`)
+})
